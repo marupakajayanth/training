@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechNova Internal Knowledge Portal: Central onboarding and resources for new employees.">
+  <title>TechNova Internal Knowledge Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="introduction">
+      <article>
+        <h1>Welcome to TechNova Solutions</h1>
+        <h2>About Us</h2>
+        <p>TechNova Solutions is a global IT consulting company, empowering businesses with innovative technology solutions across multiple time zones.</p>
+        <h3>Our Offices</h3>
+        <ul>
+          <li>Seattle, USA</li>
+          <li>Hyderabad, India</li>
+          <li>London, UK</li>
+          <li>Sydney, Australia</li>
+        </ul>
+        <h3>Onboarding Steps</h3>
+        <ol>
+          <li>Receive your welcome email</li>
+          <li>Access the internal portal</li>
+          <li>Complete HR documentation</li>
+          <li>Meet your onboarding buddy</li>
+          <li>Start your first project</li>
+        </ol>
+        <figure>
+          <img src="images/office.jpg" alt="TechNova modern office workspace" width="400">
+          <figcaption>Our collaborative workspace in Seattle HQ</figcaption>
+        </figure>
+      </article>
+    </section>
+    <section id="resources">
+      <h2>Internal Tools & Documentation</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Description</th>
+            <th>Owner/Team</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NovaDocs</td>
+            <td>Centralized documentation repository</td>
+            <td>Knowledge Team</td>
+            <td><a href="#">Access</a></td>
+          </tr>
+          <tr>
+            <td>TimeSync</td>
+            <td>Time tracking and leave management</td>
+            <td>HR</td>
+            <td><a href="#">Access</a></td>
+          </tr>
+          <tr>
+            <td>ProjectHub</td>
+            <td>Project management dashboard</td>
+            <td>PMO</td>
+            <td><a href="#">Access</a></td>
+          </tr>
+          <tr>
+            <td>SupportDesk</td>
+            <td>IT support ticketing system</td>
+            <td>IT</td>
+            <td><a href="#">Access</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="team">
+      <h2>Meet the Core Team</h2>
+      <div class="team-cards">
+        <figure class="team-card">
+          <img src="images/alex.jpg" alt="Alex Kim, CTO" width="150">
+          <figcaption>
+            <strong>Alex Kim</strong><br>
+            CTO<br>
+            <span>"Loves hiking and cloud architecture."</span>
+          </figcaption>
+        </figure>
+        <figure class="team-card">
+          <img src="images/sam.jpg" alt="Samira Patel, HR Lead" width="150">
+          <figcaption>
+            <strong>Samira Patel</strong><br>
+            HR Lead<br>
+            <span>"Speaks 4 languages and bakes amazing cakes."</span>
+          </figcaption>
+        </figure>
+        <figure class="team-card">
+          <img src="images/lee.jpg" alt="Lee Chen, Project Manager" width="150">
+          <figcaption>
+            <strong>Lee Chen</strong><br>
+            Project Manager<br>
+            <span>"Board game enthusiast and agile coach."</span>
+          </figcaption>
+        </figure>
+        <figure class="team-card">
+          <img src="images/rita.jpg" alt="Rita Singh, IT Support" width="150">
+          <figcaption>
+            <strong>Rita Singh</strong><br>
+            IT Support<br>
+            <span>"Tech troubleshooter and marathon runner."</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="multimedia">
+      <h2>Welcome Multimedia</h2>
+      <div class="media-wrapper">
+        <div class="video-block">
+          <video width="320" height="180" controls>
+            <source src="media/intro.mp4" type="video/mp4">
+            <track kind="captions" src="media/intro-captions.vtt" srclang="en" label="English captions">
+            Your browser does not support the video tag.
+          </video>
+          <p class="transcript">Transcript: Welcome to TechNova! In this video, you'll learn about our mission, values, and how to get started...</p>
+        </div>
+        <div class="audio-block">
+          <audio controls>
+            <source src="media/welcome-podcast.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p class="transcript">Podcast summary: Listen to our founders discuss the TechNova journey and what makes our culture unique.</p>
+        </div>
+      </div>
+    </section>
+    <section id="newsletter">
+      <h2>Sign Up for the TechNova Newsletter</h2>
+      <form aria-label="Newsletter Signup">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required aria-required="true">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="department">Department</label>
+        <select id="department" name="department" required aria-required="true">
+          <option value="">Select Department</option>
+          <option value="engineering">Engineering</option>
+          <option value="hr">HR</option>
+          <option value="it">IT</option>
+          <option value="marketing">Marketing</option>
+        </select>
+
+        <div class="checkbox-block">
+          <input type="checkbox" id="agree" name="agree" required aria-required="true">
+          <label for="agree">I agree to receive emails from TechNova</label>
+        </div>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 TechNova Solutions. All rights reserved.</p>
+  </footer>
+</body>
+</html> 
