@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the TechNova Solutions internal knowledge portal for new engineers.">
+    <title>TechNova Onboarding Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="logo">TechNova</h1>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <article>
+
+              <h2>Your Journey Starts Here</h2>
+              <p>We are a global IT consulting company dedicated to delivering cutting-edge solutions. This portal is your central hub for everything you need to get started.</p>
+              <img src="images/technova.png" alt="A modern office space representing TechNova Solutions" class="section-image">
+              
+              <h3>Our Global Offices</h3>
+              <ul>
+                <li>New York, USA</li>
+                <li>London, UK</li>
+                <li>Noida, India</li>
+                <li>Singapore</li>
+              </ul>
+              
+              <h3>Key Onboarding Steps</h3>
+              <ol>
+                <li>Complete HR paperwork.</li>
+                <li>Set up your development environment.</li>
+                <li>Meet your mentor and team.</li>
+                <li>Review the project documentation.</li>
+              </ol>
+            </article>
+        </section>
+
+        <section id="resources">
+            <h2>Internal Tools & Documentation</h2>
+            <p>Here are some essential resources you'll need. Bookmark them!</p>
+            <div class="table-container">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Tool Name</th>
+                          <th>Description</th>
+                          <th>Owner/Team</th>
+                          <th>Link</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Nova-Wiki</td>
+                          <td>Internal knowledge base for all projects.</td>
+                          <td>Documentation Team</td>
+                          <td><a href="#">Access Wiki</a></td>
+                      </tr>
+                      <tr>
+                          <td>CodeHub</td>
+                          <td>Private Git repository hosting.</td>
+                          <td>DevOps</td>
+                          <td><a href="#">Go to CodeHub</a></td>
+                      </tr>
+                      <tr>
+                          <td>HR Portal</td>
+                          <td>Manage your payroll, leave, and benefits.</td>
+                          <td>Human Resources</td>
+                          <td><a href="#">Open HR Portal</a></td>
+                      </tr>
+                      <tr>
+                          <td>ChatterBox</td>
+                          <td>Company-wide communication platform.</td>
+                          <td>IT Support</td>
+                          <td><a href="#">Launch ChatterBox</a></td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+        </section>
+
+        <section id="team">
+            <h2>Meet the Core Team</h2>
+            <div class="team-container">
+                <figure>
+                    <img src="/images/core1.jpg" alt="Profile picture of Anika Varma">
+                    <figcaption>
+                        <h3>Anika Varma</h3>
+                        <p class="designation">Head of Engineering</p>
+                        <p class="bio">Loves building scalable systems and mentoring new talent.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/core2.jpg" alt="Profile picture of Ben Carter">
+                    <figcaption>
+                        <h3>Ben Carter</h3>
+                        <p class="designation">Lead DevOps Engineer</p>
+                        <p class="bio">Ensures our infrastructure is robust and always online.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/core3.jpg" alt="Profile picture of rakesh Kumar">
+                    <figcaption>
+                        <h3>rakesh Kumar</h3>
+                        <p class="designation">Senior Product Manager</p>
+                        <p class="bio">Defines the product vision and connects with our clients.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/core4.jpg" alt="Profile picture of ramesh">
+                    <figcaption>
+                        <h3>ramesh kotla</h3>
+                        <p class="designation">Chief Technology Officer</p>
+                        <p class="bio">Drives innovation and leads our technology strategy across global teams.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="media">
+            <h2>Multimedia Resources</h2>
+            <p>Watch our company introduction and listen to a message from our CEO.</p>
+            <h3>Company Kick-off 2025</h3>
+            <video controls width="100%" poster="/images/imgV.png">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>CEO's Welcome Message</h3>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section id="newsletter">
+            <h2>Stay Updated</h2>
+            <form action="#" method="post">
+                <p>Sign up for our internal weekly newsletter for tech news and company updates.</p>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="product">Product</option>
+                        <option value="hr">Human Resources</option>
+                    </select>
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechNova Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
