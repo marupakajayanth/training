@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechNova Solutions internal employee directory.">
+    <meta name="author" content="Your Name">
+    <title>TechNova Employee Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header" role="banner">
+        <h1 class="site-title">TechNova Employee Directory</h1>
+        <nav class="main-nav" role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <label for="sidebar-toggle" class="sidebar-toggle-label">☰</label>
+    </header>
+
+    <div class="site-container">
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+        
+        <aside class="sidebar" role="complementary">
+            <div class="filter-form">
+                <h2 class="filter-title">Filters</h2>
+                <form role="search">
+                    <div>
+                        <label for="search">Search Name</label>
+                        <input type="search" id="search" name="search" placeholder="e.g., Jane Doe">
+                    </div>
+                    <div>
+                        <label for="department">Department</label>
+                        <select id="department" name="department">
+                            <option>All Departments</option>
+                            <option>Engineering</option>
+                            <option>Marketing</option>
+                            <option>Human Resources</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                            <option>All Locations</option>
+                            <option>New York</option>
+                            <option>London</option>
+                            <option>Tokyo</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <legend>Role</legend>
+                        
+                        <div>
+                            <input type="checkbox" id="manager" name="role" value="manager">
+                            <label for="manager">Manager</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="marketing" name="role" value="marketing">
+                            <label for="marketing">Marketing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="engineering" name="role" value="engineering">
+                            <label for="engineering">Engineering</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="hr" name="role" value="hr">
+                            <label for="hr">Human Resources</label>
+                        </div>
+                    </fieldset>
+                    <button type="reset" class="btn">Reset Filters</button>
+                </form>
+            </div>
+        </aside>
+
+        <main class="main-content" role="main">
+            <section class="employee-grid" aria-labelledby="directory-heading">
+                <h2 id="directory-heading" class="visually-hidden">Employee Profiles</h2>
+                
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp1.png" alt="Profile picture of Alexi Johnson" class="avatar">
+                    <h3 class="card-name">Alexi Johnson</h3>
+                    <p class="card-department">Engineering</p>
+                    <p class="card-location">New York</p>
+                    <p class="card-bio">Frontend developer focused on creating accessible user interfaces.</p>
+                    <div class="card-contact">
+                        <a href="mailto:alex.j@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp2.png" alt="Profile picture of Mark Joy" class="avatar">
+                    <h3 class="card-name">Mark Joy</h3>
+                    <p class="card-department">Marketing</p>
+                    <p class="card-location">London</p>
+                    <p class="card-bio">Digital marketing strategist with a passion for brand storytelling.</p>
+                    <div class="card-contact">
+                        <a href="mailto:maria.g@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp3.png" alt="Profile picture of Chen Wei" class="avatar">
+                    <h3 class="card-name">Chen Wei</h3>
+                    <p class="card-department">Engineering</p>
+                    <p class="card-location">Tokyo</p>
+                    <p class="card-bio">Backend specialist ensuring our infrastructure is robust and scalable.</p>
+                    <div class="card-contact">
+                        <a href="mailto:chen.w@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp4.png" alt="Profile picture of Fatima Ahmed" class="avatar">
+                    <h3 class="card-name">Fatima Ahmed</h3>
+                    <p class="card-department">Human Resources</p>
+                    <p class="card-location">New York</p>
+                    <p class="card-bio">HR Manager dedicated to fostering a positive and inclusive workplace.</p>
+                    <div class="card-contact">
+                        <a href="mailto:fatima.a@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp5.png" alt="Profile picture of David Smith" class="avatar">
+                    <h3 class="card-name">David Smith</h3>
+                    <p class="card-department">Engineering</p>
+                    <p class="card-location">London</p>
+                    <p class="card-bio">QA Engineer ensuring our products meet the highest quality standards.</p>
+                    <div class="card-contact">
+                        <a href="mailto:david.s@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp6.png" alt="Profile picture of Chloe Dubois" class="avatar">
+                    <h3 class="card-name">Chloe Dubois</h3>
+                    <p class="card-department">Marketing</p>
+                    <p class="card-location">New York</p>
+                    <p class="card-bio">Content creator who brings the TechNova voice to life across all media.</p>
+                    <div class="card-contact">
+                        <a href="mailto:chloe.d@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp7.png" alt="Profile picture of Samuel Green" class="avatar">
+                    <h3 class="card-name">Samuel Green</h3>
+                    <p class="card-department">Engineering</p>
+                    <p class="card-location">London</p>
+                    <p class="card-bio">Full-stack developer and team lead for the core platform team.</p>
+                    <div class="card-contact">
+                        <a href="mailto:samuel.g@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+                <article class="card" role="listitem">
+                    <img src="/assets/images/emp8.png" alt="Profile picture of Yuki Tanaka" class="avatar">
+                    <h3 class="card-name">Yuki Tanaka</h3>
+                    <p class="card-department">Human Resources</p>
+                    <p class="card-location">Tokyo</p>
+                    <p class="card-bio">Recruitment specialist finding the best talent to join our teams.</p>
+                    <div class="card-contact">
+                        <a href="mailto:yuki.t@technova.com" class="btn">Email</a>
+                        <a href="#" class="btn">LinkedIn</a>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; 2025 TechNova Solutions. All rights reserved.</p>
+        <p>Contact HR | Privacy Policy</p>
+    </footer>
+
+</body>
+</html>
