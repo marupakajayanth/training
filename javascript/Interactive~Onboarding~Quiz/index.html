@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Onboarding Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="app-header">
+        <p>TechNova Solutions</p>
+    </header>
+    <div class="quiz-container">
+        <div id="welcome-screen">
+            <h1>Welcome to TechNova</h1>
+            <p>Ready to test your knowledge?</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div id="status-bar">
+                <p id="score-tracker">Score: 0</p>
+                <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <p id="feedback-text"></p>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2 id="final-score"></h2>
+            <p id="time-taken"></p> <p id="result-message"></p><p id="result-message"></p>
+            
+            <button id="retake-btn">Retake Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

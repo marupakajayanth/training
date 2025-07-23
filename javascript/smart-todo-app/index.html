@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-top">
+                <h1>My Smart To-Do List 📝</h1>
+                <button id="theme-toggle" title="Toggle theme">🌞</button>
+            </div>
+            <form id="add-task-form">
+                <input type="text" id="task-input" placeholder="e.g., Finish project report" autocomplete="off">
+                <button type="submit">Add Task</button>
+            </form>
+        </header>
+
+        <main class="content-wrapper">
+            <section class="tasks-section">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <ul id="task-list">
+                    </ul>
+                 <div id="empty-state" class="hidden">
+                    <p>🎉 You're all caught up!</p>
+                </div>
+            </section>
+
+            <aside class="analytics-sidebar">
+                <h2>Analytics 📊</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <p class="stat-label">Total Tasks</p>
+                        <p class="stat-value" id="total-tasks">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-label">Completed</p>
+                        <p class="stat-value" id="completed-tasks">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-label">Pending</p>
+                        <p class="stat-value" id="pending-tasks">0</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

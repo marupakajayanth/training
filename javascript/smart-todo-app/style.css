@@ -1,0 +1,295 @@
+/* 1. THEME VARIABLES */
+:root {
+    --primary-color: #4a90e2;
+    --background-color: #f4f7f6;
+    --container-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --completed-color: #9b9b9b;
+    --danger-color: #e74c3c;
+    --filter-btn-bg: #eef1f4;
+    --sidebar-bg: #f9fafb;
+    --delete-btn-hover-bg: #fcebeb;
+    --box-shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme {
+    --background-color: #363333;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --border-color: #444;
+    --completed-color: #777;
+    --danger-color: #f47363;
+    --filter-btn-bg: #333;
+    --sidebar-bg: #2a2a2a;
+    --delete-btn-hover-bg: #4d2d29;
+    --box-shadow-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 2. GENERAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--container-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--box-shadow-color);
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+/* 3. HEADER & THEME TOGGLE */
+header {
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    border-radius: 8px;
+}
+#theme-toggle:hover {
+    background-color: var(--filter-btn-bg);
+}
+
+/* 4. FORM & TASK STYLES (NO MAJOR CHANGES) */
+#add-task-form {
+    display: flex;
+    gap: 10px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.tasks-section {
+    flex-grow: 1;
+    padding: 20px 30px;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: var(--filter-btn-bg);
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--container-bg);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.task-item:hover {
+    background-color: var(--sidebar-bg); 
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: var(--completed-color);
+    opacity: 0.7;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.task-title {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.edit-input {
+    flex-grow: 1;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--completed-color);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.delete-btn:hover {
+    color: var(--danger-color);
+    background-color: var(--delete-btn-hover-bg);
+}
+
+/* 5. SIDEBAR & HELPERS */
+.analytics-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-left: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.analytics-sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.stat-item:last-child {
+    border-bottom: none;
+}
+.stat-label {
+    margin: 0;
+    font-size: 16px;
+}
+.stat-value {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--completed-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 6. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .app-container {
+        border-radius: 0;
+        box-shadow: none;
+        height: 100vh;
+    }
+    .content-wrapper {
+        flex-direction: column-reverse;
+    }
+    .analytics-sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .tasks-section, header {
+        padding: 20px;
+    }
+}
